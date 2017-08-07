@@ -1,20 +1,29 @@
-namespace LeapYear
+namespace LeapYear.Models
 {
-  public class LeapYear
+  public class LeapYearConverter
   {
-    public bool IsLeapYear(int year)
+    private int _year;
+    public LeapYearConverter(int year)
     {
-      if (year % 400 == 0)
+      _year = year;
+    }
+    public int GetYear()
+    {
+      return _year;
+    }
+    public bool IsLeapYear()
+    {
+      if (_year % 400 == 0)
       {
         return true;
       }
-      else if (year % 100 == 0)
+      else if (_year % 100 == 0)
       {
         return false;
       }
       else
       {
-        return year % 4 == 0;
+        return _year % 4 == 0;
       }
 
     }

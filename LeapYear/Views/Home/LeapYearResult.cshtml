@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Leap year result</h1>
+
+<div class="jumbotron">
+  @if (@Model.IsLeapYear() == false)
+  {
+    <p> The year is not a leapy year.</p>
+  }
+  else
+  {
+    <p> The year is a leap year.</p>
+  }
+
+</div>
